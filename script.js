@@ -57,7 +57,7 @@ function generatePassword(lower, upper, number, symbol, length) {
 
 
 
-// Creating functions that generates random strings
+// Creating functions that generates random strings with CharCode
 function getRandomLower() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97); 
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- container element -->
     <div class="wrapper">
       <header>
         <h1>Password Generator</h1>
@@ -16,10 +17,11 @@
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+    <!-- Random Password Result -->
         <div class="card-body">
           <textarea readonly id="result" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
         </div>
-
+      <!-- User input  -->
         <div class="setting">
           <label>Password length</label>
           <input type="number" id="length" min='8' max='128' value='8'/>
@@ -41,12 +43,13 @@
           <input type="checkbox" id="symbols" checked />
         </div>
       </div>
-
+    <!-- Footer, Button-->
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
         </div>
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>

@@ -136,6 +136,8 @@ button[disabled] {
   }
 }
 
+
+/* Class for the User input area */
 .setting {
 	display: flex;
 	justify-content: space-between;
