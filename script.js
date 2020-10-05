@@ -16,6 +16,16 @@ const randomFunc = {
 	symbol: getRandomSymbol
 }
 
+// 
+generate.addEventListener('click', () => {
+	const length = +lengthEl.value;
+	const hasLower = lowercaseEl.checked;
+	const hasUpper = uppercaseEl.checked;
+	const hasNumber = numbersEl.checked;
+  const hasSymbol = symbolsEl.checked;
+  
+  console.log(hasLower, hasUpper, hasNumber, hasSymbol);
+});
 
 
 // Creating functions that generates random strings
