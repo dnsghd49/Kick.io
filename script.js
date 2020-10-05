@@ -25,7 +25,7 @@ generate.addEventListener('click', () => {
   const hasSymbol = symbolsEl.checked;
 
 // Sending user's imput to the result element   
-  resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol);
+  resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
 });
 
 // Function for the random password
@@ -33,12 +33,25 @@ function generatePassword(lower, upper, number, symbol, length) {
   let generatedPassword = '';
 // Check for every user inputs  
   const typesCount = lower + upper + number + symbol;
-
-  console.log('typesCount', typesCount);
-
   const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
 
-  console.log('typesArr', typesArr);
+// If there is no user input, it will return nothing
+  if(typesCount === 0) {
+		return '';
+  }
+
+// Created loop here with the inputs
+  for(let i=0; i<length; i+=typesCount) {
+		typesArr.forEach(type => {
+			const funcName = Object.keys(type)[0];
+      generatedPassword += randomFunc[funcName]();
+      
+		});
+  }
+  
+  // Getting password and return it
+  const finalPassword = generatedPassword.slice(0, length);
+	return finalPassword;
 
 }
 
@@ -61,18 +74,3 @@ function getRandomSymbol() {
 	const symbols = '!@#$%^&*(){}[]=<>/,.'
 	return symbols[Math.floor(Math.random() * symbols.length)];
 }
-
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
