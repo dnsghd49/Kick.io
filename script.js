@@ -37,7 +37,7 @@ function generatePassword(lower, upper, number, symbol, length) {
 
 // If there is no user input, it will return nothing
   if(typesCount === 0) {
-		return '';
+		return 'Please select at least one character type, and try it again.';
   }
 
 // Created loop here with the inputs
