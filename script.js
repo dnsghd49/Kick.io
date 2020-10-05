@@ -28,6 +28,16 @@ generate.addEventListener('click', () => {
   resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol);
 });
 
+// Function for the random password
+function generatePassword(lower, upper, number, symbol, length) {
+  let generatedPassword = '';
+  const typesCount = lower + upper + number + symbol;
+
+  console.log('typesCount', typesCount);
+
+}
+
+
 
 // Creating functions that generates random strings
 function getRandomLower() {
