@@ -16,15 +16,16 @@ const randomFunc = {
 	symbol: getRandomSymbol
 }
 
-// 
+// Checking user's input before generating the password
 generate.addEventListener('click', () => {
 	const length = +lengthEl.value;
 	const hasLower = lowercaseEl.checked;
 	const hasUpper = uppercaseEl.checked;
 	const hasNumber = numbersEl.checked;
   const hasSymbol = symbolsEl.checked;
-  
-  console.log(hasLower, hasUpper, hasNumber, hasSymbol);
+
+// Sending user's imput to the result element   
+  resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol);
 });
 
 
