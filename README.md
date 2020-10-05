@@ -1,6 +1,6 @@
 # Kick.io
 
 
-Aaron Lu's week-3 HW
+Aaron Lu's week-3 assignment.
 
-JavaScript
+Topic: JavaScript
