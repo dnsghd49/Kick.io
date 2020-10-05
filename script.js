@@ -31,9 +31,14 @@ generate.addEventListener('click', () => {
 // Function for the random password
 function generatePassword(lower, upper, number, symbol, length) {
   let generatedPassword = '';
+// Check for every user inputs  
   const typesCount = lower + upper + number + symbol;
 
   console.log('typesCount', typesCount);
+
+  const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
+
+  console.log('typesArr', typesArr);
 
 }
 
